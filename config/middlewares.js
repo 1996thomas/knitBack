@@ -9,18 +9,22 @@ module.exports = [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "*.digitaloceanspaces.com"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "https://knitmedia.fra1.digitaloceanspaces.com",
+          ],
           "media-src": ["'self'", "data:", "blob:"],
           upgradeInsecureRequests: null,
         },
       },
-      enabled: true,
       origin: [
         "http://localhost:1337",
         "http://localhost:5173",
         "https://knit-back-jds8b.ondigitalocean.app",
-      ], // Assurez-vous d'inclure toutes les origines nécessaires
-      headers: "*", // Autoriser tous les headers,
+      ],
+      headers: "*",
     },
   },
   "strapi::poweredBy",
