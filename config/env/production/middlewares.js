@@ -11,7 +11,6 @@ module.exports = [
           "default-src": ["'self'"],
           "connect-src": ["'self'", "https:"],
           "img-src": [
-            "'self'",
             "data:",
             "blob:",
             "https://knitmediaspace.fra1.digitaloceanspaces.com",
@@ -20,7 +19,6 @@ module.exports = [
             "https://knit-back-jds8b.ondigitalocean.",
           ],
           "media-src": [
-            "'self'",
             "data:",
             "blob:",
             "https://knitmediaspace.fra1.digitaloceanspaces.com",
