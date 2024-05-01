@@ -8,6 +8,7 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
+          "default-src": ["'self'"],
           "connect-src": ["'self'", "https:"],
           "img-src": [
             "'self'",
@@ -25,6 +26,7 @@ module.exports = [
             "https://knitmediaspace.fra1.digitaloceanspaces.com",
             "https://market-assets.strapi.io",
             "https://knit-back-jds8b.ondigitalocean.",
+            "market-assets.strapi.io"
           ],
 
           upgradeInsecureRequests: null,
