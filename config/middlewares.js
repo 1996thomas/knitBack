@@ -13,10 +13,11 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "https://market-assets.strapi.io", 
-            "*.digitaloceanspaces.com", // wildcard pour tous les sous-domaines
-            "https://knitmedia.fra1.digitaloceanspaces.com", // spécifique à votre espace
+            "https://market-assets.strapi.io",
+            "*.digitaloceanspaces.com",
+            "https://knitmediaspace.fra1.digitaloceanspaces.com",
           ],
+
           "media-src": ["'self'", "data:", "blob:"],
           upgradeInsecureRequests: null,
         },

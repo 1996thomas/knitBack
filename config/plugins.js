@@ -7,7 +7,6 @@ module.exports = () => ({
         secret: process.env.DO_SPACE_SECRET_KEY,
         endpoint: process.env.DO_SPACE_ENDPOINT,
         space: process.env.DO_SPACE_BUCKET,
-        directory: "media",
       },
     },
   },
