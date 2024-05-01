@@ -14,10 +14,9 @@ module.exports = [
             "data:",
             "blob:",
             "https://market-assets.strapi.io",
-            "*.digitaloceanspaces.com",
-            "https://knitmediaspace.fra1.digitaloceanspaces.com",
+            "*.digitaloceanspaces.com", // This should cover your domain, check for typos or restrictions.
+            "https://knitmediaspace.fra1.digitaloceanspaces.com", // Added explicitly
           ],
-
           "media-src": ["'self'", "data:", "blob:"],
           upgradeInsecureRequests: null,
         },
