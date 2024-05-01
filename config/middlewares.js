@@ -13,14 +13,20 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "https://knitmediaspace.fra1.digitaloceanspaces.com", // Added explicitly
+            "https://knitmediaspace.fra1.digitaloceanspaces.com",
+            "https://market-assets.strapi.io",
+            ".digitaloceanspaces.com",
+            "https://knit-back-jds8b.ondigitalocean.",
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
-            "https://knitmediaspace.fra1.digitaloceanspaces.com", // Added explicitly
+            "https://knitmediaspace.fra1.digitaloceanspaces.com",
+            "https://market-assets.strapi.io",
+            "https://knit-back-jds8b.ondigitalocean.",
           ],
+
           upgradeInsecureRequests: null,
         },
       },
