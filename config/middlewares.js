@@ -13,7 +13,8 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "https://knitmedia.fra1.digitaloceanspaces.com",
+            "*.digitaloceanspaces.com", // wildcard pour tous les sous-domaines
+            "https://knitmedia.fra1.digitaloceanspaces.com", // spécifique à votre espace
           ],
           "media-src": ["'self'", "data:", "blob:"],
           upgradeInsecureRequests: null,
