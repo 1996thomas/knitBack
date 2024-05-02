@@ -1,28 +1,53 @@
-module.exports = [
-  "strapi::logger",
+// module.exports = [
+//   "strapi::logger",
+//   "strapi::errors",
+//   "strapi::security",
+//   {
+//     name: "strapi::cors",
+//     config: {
+//       contentSecurityPolicy: {
+//         useDefaults: true,
+//         directives: {
+//           "connect-src": ["'self'", "https:"],
+//           "img-src": ["*", "data:", "blob:"],
+//           "media-src": ["*", "data:", "blob:"],
+//           upgradeInsecureRequests: null,
+//         },
+//       },
+//       origin: [
+//         "*",
+//         "http://localhost:1337",
+//         "http://localhost:5173",
+//         "https://knit-back-jds8b.ondigitalocean.app",
+//       ],
+//       headers: "*",
+//     },
+//   },
+//   "strapi::poweredBy",
+//   "strapi::query",
+//   "strapi::body",
+//   "strapi::session",
+//   "strapi::favicon",
+//   "strapi::public",
+// ];
+export default [
   "strapi::errors",
-  "strapi::security",
+  "strapi::logger",
   {
-    name: "strapi::cors",
+    name: "strapi::security",
     config: {
-      // contentSecurityPolicy: {
-      //   useDefaults: true,
-      //   directives: {
-      //     "connect-src": ["'self'", "https:"],
-      //     "img-src": ["*", "data:", "blob:"],
-      //     "media-src": ["*", "data:", "blob:"],
-      //     upgradeInsecureRequests: null,
-      //   },
-      // },
-      origin: [
-        "*",
-        "http://localhost:1337",
-        "http://localhost:5173",
-        "https://knit-back-jds8b.ondigitalocean.app",
-      ],
-      headers: "*",
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "*.digitaloceanspaces.com"],
+          "media-src": ["'self'", "data:", "blob:"],
+          upgradeInsecureRequests: null,
+        },
+      },
     },
   },
+  "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
