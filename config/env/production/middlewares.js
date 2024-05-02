@@ -62,7 +62,7 @@
 //   "strapi::favicon",
 //   "strapi::public",
 // ];
-export default [
+module.exports = [
   "strapi::errors",
   "strapi::logger",
   {
