@@ -5,15 +5,15 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          "connect-src": ["'self'", "https:"],
-          "img-src": ["*", "data:", "blob:"],
-          "media-src": ["*", "data:", "blob:"],
-          upgradeInsecureRequests: null,
-        },
-      },
+      // contentSecurityPolicy: {
+      //   useDefaults: true,
+      //   directives: {
+      //     "connect-src": ["'self'", "https:"],
+      //     "img-src": ["*", "data:", "blob:"],
+      //     "media-src": ["*", "data:", "blob:"],
+      //     upgradeInsecureRequests: null,
+      //   },
+      // },
       origin: [
         "*",
         "http://localhost:1337",
