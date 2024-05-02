@@ -10,23 +10,8 @@ module.exports = [
         directives: {
           "default-src": ["'self'"],
           "connect-src": ["'self'", "https:"],
-          "img-src": [
-            "data:",
-            "blob:",
-            "https://knitmediaspace.fra1.digitaloceanspaces.com",
-            "https://market-assets.strapi.io",
-            ".digitaloceanspaces.com",
-            "https://knit-back-jds8b.ondigitalocean.",
-          ],
-          "media-src": [
-            "data:",
-            "blob:",
-            "https://knitmediaspace.fra1.digitaloceanspaces.com",
-            "https://market-assets.strapi.io",
-            "https://knit-back-jds8b.ondigitalocean.",
-            "market-assets.strapi.io"
-          ],
-
+          "img-src": ["*", "data:", "blob:"],
+          "media-src": ["*", "data:", "blob:"],
           upgradeInsecureRequests: null,
         },
       },
