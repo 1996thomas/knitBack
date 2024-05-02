@@ -8,7 +8,6 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "default-src": ["'self'"],
           "connect-src": ["'self'", "https:"],
           "img-src": ["*", "data:", "blob:"],
           "media-src": ["*", "data:", "blob:"],
@@ -16,6 +15,7 @@ module.exports = [
         },
       },
       origin: [
+        "*",
         "http://localhost:1337",
         "http://localhost:5173",
         "https://knit-back-jds8b.ondigitalocean.app",
