@@ -32,6 +32,9 @@ dependencies:
   react-router-dom:
     specifier: 5.3.4
     version: 5.3.4(react@18.3.1)
+  react-router-hash-link:
+    specifier: ^2.4.3
+    version: 2.4.3(react-router-dom@5.3.4)(react@18.3.1)
   strapi-provider-upload-do:
     specifier: ^3.6.9
     version: 3.6.9
@@ -9078,6 +9081,17 @@ packages:
       react-router: 5.3.4(react@18.3.1)
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
+    dev: false
+
+  /react-router-hash-link@2.4.3(react-router-dom@5.3.4)(react@18.3.1):
+    resolution: {integrity: sha512-NU7GWc265m92xh/aYD79Vr1W+zAIXDWp3L2YZOYP4rCqPnJ6LI6vh3+rKgkidtYijozHclaEQTAHaAaMWPVI4A==}
+    peerDependencies:
+      react: '>=15'
+      react-router-dom: '>=4'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-router-dom: 5.3.4(react@18.3.1)
     dev: false
 
   /react-router@5.3.4(react@18.3.1):
