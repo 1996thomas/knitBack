@@ -26,6 +26,7 @@ module.exports = [
         "https://knit-front-final.vercel.app",
       ],
       headers: "*",
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     },
   },
   "strapi::poweredBy",
