@@ -905,6 +905,37 @@ export interface ApiContactMessageContactMessage extends Schema.CollectionType {
   };
 }
 
+export interface ApiEmailListEmailList extends Schema.CollectionType {
+  collectionName: 'email_lists';
+  info: {
+    singularName: 'email-list';
+    pluralName: 'email-lists';
+    displayName: 'emailList';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::email-list.email-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::email-list.email-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -954,6 +985,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
+      'api::email-list.email-list': ApiEmailListEmailList;
       'api::tag.tag': ApiTagTag;
     }
   }
