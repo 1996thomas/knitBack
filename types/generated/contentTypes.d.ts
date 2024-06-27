@@ -897,6 +897,28 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
   };
 }
 
+export interface ApiCguCgu extends Schema.CollectionType {
+  collectionName: 'cgus';
+  info: {
+    singularName: 'cgu';
+    pluralName: 'cgus';
+    displayName: 'CGU';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cgu: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::cgu.cgu', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::cgu.cgu', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactMessageContactMessage extends Schema.CollectionType {
   collectionName: 'contact_messages';
   info: {
@@ -1010,6 +1032,7 @@ declare module '@strapi/types' {
       'api::ad.ad': ApiAdAd;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::cgu.cgu': ApiCguCgu;
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::email-list.email-list': ApiEmailListEmailList;
       'api::tag.tag': ApiTagTag;

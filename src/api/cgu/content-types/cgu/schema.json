@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cgus",
+  "info": {
+    "singularName": "cgu",
+    "pluralName": "cgus",
+    "displayName": "CGU"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cgu": {
+      "type": "blocks"
+    }
+  }
+}
