@@ -827,7 +827,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     content: Attribute.Blocks;
-    slug: Attribute.String & Attribute.Unique;
+    slug: Attribute.UID<'api::article.article', 'title'>;
     cover: Attribute.Media;
     thumbnail: Attribute.Media;
     tags: Attribute.Relation<
