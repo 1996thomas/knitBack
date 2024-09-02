@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_dialog_dialogs",
+  "info": {
+    "displayName": "dialog",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "blocks"
+    },
+    "reponse": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

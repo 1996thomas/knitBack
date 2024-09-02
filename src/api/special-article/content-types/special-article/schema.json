@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "special_articles",
+  "info": {
+    "singularName": "special-article",
+    "pluralName": "special-articles",
+    "displayName": "specialArticle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dialog": {
+      "displayName": "dialog",
+      "type": "component",
+      "repeatable": true,
+      "component": "dialog.dialog"
+    },
+    "portraitCarousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "articleName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "articleName"
+    },
+    "specialCarousel": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

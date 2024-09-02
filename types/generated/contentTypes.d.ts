@@ -984,6 +984,41 @@ export interface ApiEmailListEmailList extends Schema.CollectionType {
   };
 }
 
+export interface ApiSpecialArticleSpecialArticle extends Schema.CollectionType {
+  collectionName: 'special_articles';
+  info: {
+    singularName: 'special-article';
+    pluralName: 'special-articles';
+    displayName: 'specialArticle';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    dialog: Attribute.Component<'dialog.dialog', true>;
+    portraitCarousel: Attribute.Media;
+    articleName: Attribute.String;
+    slug: Attribute.UID<'api::special-article.special-article', 'articleName'>;
+    specialCarousel: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::special-article.special-article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::special-article.special-article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -1036,6 +1071,7 @@ declare module '@strapi/types' {
       'api::cgu.cgu': ApiCguCgu;
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::email-list.email-list': ApiEmailListEmailList;
+      'api::special-article.special-article': ApiSpecialArticleSpecialArticle;
       'api::tag.tag': ApiTagTag;
     }
   }
