@@ -2,7 +2,8 @@
   "collectionName": "components_dialog_dialogs",
   "info": {
     "displayName": "dialog",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,14 +14,18 @@
       "type": "blocks"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "LargeHeading": {
+      "type": "blocks"
     }
   }
 }

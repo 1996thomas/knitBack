@@ -5,11 +5,13 @@ export interface DialogDialog extends Schema.Component {
   info: {
     displayName: 'dialog';
     icon: 'alien';
+    description: '';
   };
   attributes: {
     question: Attribute.Blocks;
     reponse: Attribute.Blocks;
     image: Attribute.Media;
+    LargeHeading: Attribute.Blocks;
   };
 }
 
