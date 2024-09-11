@@ -10,7 +10,6 @@ export interface DialogDialog extends Schema.Component {
   attributes: {
     question: Attribute.Blocks;
     reponse: Attribute.Blocks;
-    image: Attribute.Media;
     LargeHeading: Attribute.Blocks;
   };
 }

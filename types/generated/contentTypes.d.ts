@@ -997,7 +997,6 @@ export interface ApiSpecialArticleSpecialArticle extends Schema.CollectionType {
   };
   attributes: {
     dialog: Attribute.Component<'dialog.dialog', true>;
-    portraitCarousel: Attribute.Media;
     articleName: Attribute.String;
     slug: Attribute.UID<'api::special-article.special-article', 'articleName'>;
     specialCarousel: Attribute.Media;
